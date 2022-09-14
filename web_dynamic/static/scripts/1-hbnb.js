@@ -6,7 +6,7 @@ console.log("Hola")
 
 $( document ).ready(function() {
     console.log("Se cargo el DOM")
-    if ($("el").is('checked') ){
+    if ( $("el").is(':checked') ){
         alert("Checkbox is checked")
     } else {
         alert("Checkbox was unchecked")
