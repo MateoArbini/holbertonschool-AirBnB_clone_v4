@@ -10,15 +10,19 @@
 
 const idAmenity = [];
 
-console.log("holaaa");
+console.log("Hola");
 
 $(document).ready(function() {
-    console.log("dogchaw");
+    console.log("Se cargo el DOM");
     $("input[type=checkbox]").change(function(){
         if ($(this).prop("checked")) {
-            idAmenity.push($(this).attr("id"))
-            console.log("aaaaaa", idAmenity)
-        }
-        console.log("ayuda")
-    })
-})
+            idAmenity.push($(this).attr("data-id"))
+            console.log(idAmenity)
+        } else {
+            for (let i = 0; i < idAmenity.length; i++) {
+                if (i === "id") {
+                    idAmenity.splice(i, idAmenity[i])
+                    console.log("Element was deleted")
+                }
+            }
+    })})
