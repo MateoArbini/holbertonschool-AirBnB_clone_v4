@@ -7,22 +7,17 @@
 //         if ($("#el").prop("checked")) {
 //             list_of_checks.push($("#el").attr("id"))
 //             console.log(list_of_checks) } } } );
-
 const idAmenity = [];
 
-console.log("Hola");
-
-$(document).ready(function() {
-    console.log("Se cargo el DOM");
-    $("input[type=checkbox]").change(function(){
-        if ($(this).prop("checked")) {
-            idAmenity.push($(this).attr("data-id"))
-            console.log(idAmenity)
-        } else {
-            for (let i = 0; i < idAmenity.length; i++) {
-                if (i === "id") {
-                    idAmenity.splice(i, idAmenity[i])
-                    console.log("Element was deleted")
-                }
-            }
-    })})
+$(document).ready(function () {
+	let checkedAmenities = {};
+	$("input[type=checkbox]").change(function () {
+	if ($(this).prop("checked")) {
+		idAmenity.push($(this).data("id"))
+		console.log("aaaayuda", idAmenity)
+	  } else {
+		idAmenity.splice(idAmenity.indexOf($(this).data("id"), 1));
+		console.log("chauu", idAmenity)
+	  }
+	});
+  });
