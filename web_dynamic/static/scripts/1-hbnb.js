@@ -10,14 +10,14 @@
 const idAmenity = [];
 
 $(document).ready(function () {
+    console.log("Hola DOM cargado")
 	let checkedAmenities = {};
 	$("input[type=checkbox]").change(function () {
 	if ($(this).prop("checked")) {
 		idAmenity.push($(this).data("id"))
-		console.log("aaaayuda", idAmenity)
 	  } else {
 		idAmenity.splice(idAmenity.indexOf($(this).data("id"), 1));
-		console.log("chauu", idAmenity)
 	  }
+      console.log("Lista elementos", idAmenity)
 	});
   });
