@@ -7,8 +7,6 @@ console.log("Hola")
 $( document ).ready(function() {
     console.log("Se cargo el DOM")
     if ( $("el").is(':checked') ){
-        alert("Checkbox is checked")
-    } else {
-        alert("Checkbox was unchecked")
-    }
-});
+        if ($("#el").prop("checked")) {
+            list_of_checks.push($("#el").attr("id"))
+            console.log(list_of_checks) } } } );
