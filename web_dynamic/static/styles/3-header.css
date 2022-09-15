@@ -10,7 +10,7 @@ header .logo {
     height: 100%;
 }
 .API {
-    position: relative;
+    position: absolute;
     float: right;
     border-radius: 50%;
     vertical-align: middle;
@@ -18,6 +18,7 @@ header .logo {
     background-color: #CCCCCC;
     height: 40px;
     width: 40px;
+    top: 10px;
 }
 .available {
     background-color: #ff545f;
