@@ -20,6 +20,17 @@ header .logo {
     top: 5px;
     transform: translateY(10px);
 }
-.available {
+#api_status{
+    position: absolute;
+    right: 30px;
+    border-radius: 90%;
+    vertical-align: middle;
+    background-color: #CCCCCC;
+    height: 40px;
+    width: 40px;
+    top: 5px;
+    transform: translateY(10px);
+}
+#api_status.available {
     background-color: #ff545f;
 }
