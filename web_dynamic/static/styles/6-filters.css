@@ -1,5 +1,6 @@
 .amenities .popover ul li input {
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 .container .filters {
