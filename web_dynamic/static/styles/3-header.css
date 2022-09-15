@@ -13,8 +13,9 @@ header .logo {
     float: right;
     border-radius: 40px;
     vertical-align: middle;
-    border-right: 30px;
+    margin-right: 30px;
     background-color: #CCCCCC;
+    height: 40px;
 }
 #api_status.available {
     background-color: #ff545f;
