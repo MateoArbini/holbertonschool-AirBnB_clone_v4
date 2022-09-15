@@ -14,7 +14,7 @@ $(document).ready(function () {
     }
     $('div.amenities h4').text(Object.values(idAmenity).join(', '));
   });
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+  $.get('http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/status/', function (data) {
     // Si el status de la peticion es OK, agregamos la clase
     if (data.status === 'OK') {
       $('div#api_status').addClass('available');
