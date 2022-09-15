@@ -17,6 +17,7 @@ header .logo {
     margin-right: 30px;
     background-color: #CCCCCC;
     height: 40px;
+    width: 40px;
 }
 .available {
     background-color: #ff545f;
