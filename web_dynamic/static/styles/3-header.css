@@ -10,7 +10,7 @@ header .logo {
     height: 100%;
 }
 .API {
-    position: absolute;
+    position: relative;
     float: right;
     border-radius: 50%;
     vertical-align: middle;
