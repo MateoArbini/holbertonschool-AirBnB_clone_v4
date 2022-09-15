@@ -14,14 +14,13 @@ $(document).ready(function () {
     }
     $('div.amenities h4').text(Object.values(idAmenity).join(', '));
   });
-});
   $.get('0.0.0.0:5001/api/v1/status/', function (data) {
     // Si el status de la peticion es OK, agregamos la clase
-    if (data.status === "OK") {
-        $('#api_status').addClass('available')
+    if (data.status === 'OK') {
+      $('#api_status').addClass('available');
     // De lo contrario, removemos la clase
     } else {
-        $('#api_status').removeClass('available')
+      $('#api_status').removeClass('available');
     }
+  });
 });
-
