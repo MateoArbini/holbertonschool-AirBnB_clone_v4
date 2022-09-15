@@ -12,13 +12,14 @@ header .logo {
 .API {
     position: absolute;
     float: right;
-    border-radius: 50%;
+    border-radius: 90%;
     vertical-align: middle;
-    margin-right: 30px;
+    margin-left: 1620px;
     background-color: #CCCCCC;
     height: 40px;
     width: 40px;
-    top: 50%
+    top: 5px;
+    transform: translateY(10px);
 }
 .available {
     background-color: #ff545f;
