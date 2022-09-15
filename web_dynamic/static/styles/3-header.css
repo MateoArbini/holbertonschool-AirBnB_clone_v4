@@ -11,7 +11,7 @@ header .logo {
 }
 .API {
     position: absolute;
-    float: right;
+    right: 30px;
     border-radius: 90%;
     vertical-align: middle;
     margin-left: 1620px;
