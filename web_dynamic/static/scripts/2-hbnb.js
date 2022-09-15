@@ -14,6 +14,8 @@ $(document).ready(function () {
     }
     $('div.amenities h4').text(Object.values(idAmenity).join(', '));
   });
+  //Para testear, dejamos la IP de la sandbox, pero para el chequer debemos
+  //Cambiar la IP a 0.0.0.0
   $.get('http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/status/', function (data) {
     // Si el status de la peticion es OK, agregamos la clase
     if (data.status === 'OK') {
