@@ -39,7 +39,7 @@ $(document).ready(function () {
     $.ajax({
       type: 'POST',
       url: 'http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: amenitiesid }), // Convertir a string
+      data: JSON.stringify({ 'amenities': amenitiesid }), // Convertir a string
       dataType: 'json',
       contentType: 'application/json',
       // On success we call funcition "data" y hacemos un for para "appendiar"
