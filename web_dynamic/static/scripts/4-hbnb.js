@@ -29,6 +29,7 @@ $(document).ready(function () {
   // Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector('button');
   btn.addEventListener('click', function () {
+    $(".places").children("article").remove();
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
