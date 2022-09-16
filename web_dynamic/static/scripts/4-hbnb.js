@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
   // Para testear, dejamos la IP de la sandbox, pero para el chequer debemos
   // Cambiar la IP a 0.0.0.0
-  $.get('http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/status/', function (data) {
+  $.get('http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/status/', function (data) {
     // Si el status de la peticion es OK, agregamos la clase
     if (data.status === 'OK') {
       $('div#api_status').addClass('available');
@@ -37,7 +37,7 @@ $(document).ready(function () {
     $("section.places").empty();
     $.ajax({
       type: 'POST',
-      url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
+      url: 'http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/places_search/',
       data: JSON.stringify({'amenities': amenitiesid}), // Convertir a string
       dataType: 'json',
       contentType: 'application/json',
