@@ -29,7 +29,7 @@ $(document).ready(function () {
   // Task 4 - Make a POST request using AJAX:
   $.ajax({
     type: 'POST',
-    url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
+    url: 'http://0.0.0.0:5001/api/v1/places_search/',
     data: '{}',
     dataType: 'json',
     contentType: 'application/json',
