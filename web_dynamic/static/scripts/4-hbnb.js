@@ -59,33 +59,6 @@ $(document).ready(function () {
   // Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector('button');
   btn.addEventListener('click', function () {
-    $.ajax({
-      type: 'POST',
-      url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
-      data: idAmenity,
-      dataType: 'json',
-      contentType: 'application/json',
-      // On success we call funcition "data" y hacemos un for para "appendiar"
-      // toda la info que haya en "data" que seria todos los places
-      success: function (idAmenity) {
-        for (let i = 0; i < idAmenity.length; i++) {
-          $('section.places').append(`
-            <article>
-                <div class="title_box">
-                    <h2>${idAmenity[i].name}</h2>
-                    <div class="price_by_night">${idAmenity[i].price_by_night}</div>
-                </div>
-                <div class="information">
-                    <div class="max_guest"> ${idAmenity[i].max_guest} Guest</div>
-                        <div class="number_rooms"> ${idAmenity[i].number_rooms} Bedrooms</div>
-                        <div class="number_bathrooms"> ${idAmenity[i].number_bathrooms} Bathrooms</div>
-                    </div>
-                    <div class="user">
-                    </div>
-                        <div class="description">${idAmenity[i].description}</div>
-            </article>`);
-        }
-      }
-    });
+    console.log(alert("HOLISSSSSS"));
   });
 });
