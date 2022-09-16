@@ -59,6 +59,6 @@ $(document).ready(function () {
   //Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector("button");
   btn.addEventListener("click", function() {
-    console.log("Hello")
+    alert("Hello")
   })
 });
