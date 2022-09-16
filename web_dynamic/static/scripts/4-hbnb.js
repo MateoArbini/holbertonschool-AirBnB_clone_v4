@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
   // Para testear, dejamos la IP de la sandbox, pero para el chequer debemos
   // Cambiar la IP a 0.0.0.0
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+  $.get('http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/status/', function (data) {
     // Si el status de la peticion es OK, agregamos la clase
     if (data.status === 'OK') {
       $('div#api_status').addClass('available');
@@ -29,7 +29,7 @@ $(document).ready(function () {
   // Task 4 - Make a POST request using AJAX:
   $.ajax({
     type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search/',
+    url: 'http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/places_search/',
     data: '{}',
     dataType: 'json',
     contentType: 'application/json',
