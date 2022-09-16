@@ -59,6 +59,11 @@ $(document).ready(function () {
   //Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector("button");
   btn.addEventListener("click", function() {
-    alert("Hello")
+    $.ajax({
+        type: 'POST',
+        url: 'http://924ff86aab37.a5066603.hbtn-cod.io:5001/api/v1/places_search/',
+        data: '{}',
+        dataType: 'json',
+        contentType: 'application/json',
   })
 });
