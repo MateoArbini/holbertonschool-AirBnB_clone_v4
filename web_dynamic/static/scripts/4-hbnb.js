@@ -29,17 +29,12 @@ $(document).ready(function () {
   // Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector('button');
   btn.addEventListener('click', function () {
-    const amenitiesid = [];
-    $('input[type=checkbox]').change(function () {
-      if ($(this).prop('checked')) {
-        amenitiesid.push($(this).attr('data-id'));
-      }
-    });
-    $('section.places').empty();
+    $('section.places').remove();
+    console.log(idAmenity);
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: amenitiesid }), // Convertir a string
+      data: JSON.stringify({ amenities: idAmenity }), // Convertir a string
       dataType: 'json',
       contentType: 'application/json',
       // On success we call funcition "data" y hacemos un for para "appendiar"
