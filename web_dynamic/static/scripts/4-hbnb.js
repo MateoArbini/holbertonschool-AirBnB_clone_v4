@@ -31,14 +31,13 @@ $(document).ready(function () {
   btn.addEventListener('click', function () {
     // Guardamos todas las amenities que se hayan chequeado
     let amenitiesId = Object.keys(idAmenity)
+    // Hacemos un split para sacar la llave (}) que se nos puso
     let amenitiesSplit = amenitiesId.map(obj => obj.split("}")[0]);
-    console.log(amenitiesSplit);
     $('section.places').remove();
-    console.log(idAmenity);
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: idAmenity }), // Convertir a string
+      data: JSON.stringify({ amenities: amenitiesSplit }), // Convertir a string
       dataType: 'json',
       contentType: 'application/json',
       // On success we call funcition "data" y hacemos un for para "appendiar"
