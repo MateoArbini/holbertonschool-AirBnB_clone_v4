@@ -43,6 +43,7 @@ $(document).ready(function () {
       // On success we call funcition "data" y hacemos un for para "appendiar"
       // toda la info que haya en "data" que seria todos los places
       success: function (data) {
+        console.log(data);
         for (let i = 0; i < data.length; i++) {
           $('section.places').append(`
             <article>
