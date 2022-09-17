@@ -30,14 +30,16 @@ $(document).ready(function () {
   const btn = document.querySelector('button');
   btn.addEventListener('click', function () {
     // Guardamos todas las amenities que se hayan chequeado
-    let amenitiesId = Object.keys(idAmenity)
+    const amenitiesId = Object.keys(idAmenity);
     // Hacemos un split para sacar la llave (}) que se nos puso
-    let amenitiesSplit = amenitiesId.map(obj => obj.split("}")[0]);
-    $(".places").children("article").remove();
+    const amenitiesSplit = amenitiesId.map(obj => obj.split('}')[0]);
+    // Se usa el metodo remove para eliminar todo lo que se estaba mostrando en pantalla
+    // para asi mostrar solo lo que se seleccione en el checkbox
+    $('.places').children('article').remove();
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
-      data: JSON.stringify({ amenities: amenitiesSplit }), // Convertir a string
+      data: JSON.stringify({ amenities: amenitiesSplit }), // Convertir a string y pasar los amenities seleccionados en el checkbox
       dataType: 'json',
       contentType: 'application/json',
       // On success we call funcition "data" y hacemos un for para "appendiar"
