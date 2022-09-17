@@ -33,10 +33,11 @@ $(document).ready(function () {
     let amenitiesId = Object.keys(idAmenity)
     // Hacemos un split para sacar la llave (}) que se nos puso
     let amenitiesSplit = amenitiesId.map(obj => obj.split("}")[0]);
+    $(".places").children("article").remove();
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
-      data: JSON.stringify(idAmenity), // Convertir a string
+      data: JSON.stringify({ amenities: amenitiesSplit }), // Convertir a string
       dataType: 'json',
       contentType: 'application/json',
       // On success we call funcition "data" y hacemos un for para "appendiar"
