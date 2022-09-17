@@ -33,7 +33,6 @@ $(document).ready(function () {
     let amenitiesId = Object.keys(idAmenity)
     // Hacemos un split para sacar la llave (}) que se nos puso
     let amenitiesSplit = amenitiesId.map(obj => obj.split("}")[0]);
-    $('section.places').remove();
     $.ajax({
       type: 'POST',
       url: 'http://bb1c0825ee1d.e0de4a8b.hbtn-cod.io:5001/api/v1/places_search/',
