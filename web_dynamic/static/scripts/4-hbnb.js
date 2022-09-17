@@ -29,6 +29,10 @@ $(document).ready(function () {
   // Funcion que se ejecuta al clickear el Boton
   const btn = document.querySelector('button');
   btn.addEventListener('click', function () {
+    // Guardamos todas las amenities que se hayan chequeado
+    let amenitiesId = Object.keys(idAmenity)
+    let amenitiesSplit = amenitiesId.map(obj => obj.split("}")[0]);
+    console.log(amenitiesSplit);
     $('section.places').remove();
     console.log(idAmenity);
     $.ajax({
